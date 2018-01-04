@@ -6,6 +6,8 @@ class Fruits extends Component {
     super(props)
     this.here = this.here.bind(this)
     this.back = this.back.bind(this)
+    this.go = this.go.bind(this)
+
   }
   
   here() {
@@ -20,6 +22,12 @@ class Fruits extends Component {
     history.goBack()
   }
 
+  go() {
+    const { match: { params }, history } = this.props;
+    console.log('HISTORY', history)
+    history.go('/humans')
+  }
+
   render () {
 
     return (
@@ -28,6 +36,8 @@ class Fruits extends Component {
         <p>fruits!</p>
         <button onClick={ this.here }>click HERE!</button>
         <button onClick={ this.back }>back!</button>
+        <button onClick={ this.go }>go tacos!</button>
+
       </div>
     )
   }
