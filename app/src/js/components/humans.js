@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Nav from './nav'
 
 class Humans extends Component {
   constructor(props) {

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Humans from './components/humans'
 import Fruits from './components/fruits'
 import Example from './components/example'
+import Nav from './components/nav'
+
 
 
 const Topics = ({ match }) => (
@@ -53,21 +55,9 @@ class Application extends React.Component {
       <Router>
         <div>
           <div>
-            <Link to='/step/12'>
-              Navigate step1
-            </Link>
-          </div>
-          <div>
-            <Link to='/step/11'>
-              Navigate step2
-            </Link>
-          </div>
-          <div>
-            <Link to="/humans">humans</Link>
-          </div>
-          <Link to="/fruits">fruits</Link>
-          <li><Link to="/topics">Topics</Link></li>
-          <div>
+            <div>
+              <Link to="/fruits">fruits!</Link>
+            </div>
             <Switch>
               <Route exact path='/humans' component={Humans} />
               <Route exact path='/fruits' component={Fruits} />
